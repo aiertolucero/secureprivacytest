@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "_EditAccountModal";
+}
+
+<form>
+    <input type="hidden" id="id"value="@Model.Id">
+
+    <div class="form-group">
+        <label>IP</label>
+        <input type="text" class="form-control" id="ip" placeholder="Enter IP" value="@Model.Ip">
+    </div>
+    <div class="form-group">
+        <label>OS</label>
+        <input type="text" class="form-control" id="os" placeholder="Enter OS" value="@Model.OS">
+    </div>
+    <div class="form-group">
+        <label>Country</label>
+        <input type="text" class="form-control" id="country" placeholder="Enter Country" value="@Model.Country">
+    </div>
+    <div class="form-group">
+        <label>Binary</label>
+        <input type="text" class="form-control" id="binary" placeholder="Enter Binary" value="@Model.Binary">
+    </div>
+</form>
+
+

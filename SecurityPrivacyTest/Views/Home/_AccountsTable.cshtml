@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "_AccountsTable";
+}
+<table class="table table-bordered" style="margin-top:1em">
+    <thead>
+        <tr class="active">
+            <th>IP</th>
+            <th>OS</th>
+            <th>Country</th>
+            <th>Binary</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var account in Model)
+        {
+        <tr class="">
+            <td>@account.Ip</td>
+            <td>@account.OS</td>
+            <td>@account.Country</td>
+            <td>@account.Binary</td>
+            <td data-id="@account.Id">
+                <button class="btn-info btn btn-sm btn-edit-account" >Edit</button>
+                <button class="btn-success btn btn-sm btn-check-binary" data-binary="@account.Binary">Binary Check</button>
+                <button class="btn-danger btn btn-sm btn-delete-account">Delete</button>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
